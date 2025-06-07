@@ -12,5 +12,18 @@ function containDuplicateusingSet(nums) {
 }
 
 
-nums=[1,2,3,4,5,4]
-console.log(containDuplicateusingSet(nums));
+nums = [1, 2, 3, 4, 5, 4]
+// console.log(containDuplicateusingSet(nums));
+
+function containsDuplicateUsingObject(nums) {
+    const seen = {}
+    for (const num of nums) {
+        if (seen[num]) {
+            return true;
+        }
+        seen[num] = true
+    }
+    return false
+}
+
+console.log(containsDuplicateUsingObject(nums))
