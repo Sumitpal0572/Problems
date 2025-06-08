@@ -27,3 +27,10 @@ function containsDuplicateUsingObject(nums) {
 }
 
 console.log(containsDuplicateUsingObject(nums))
+
+
+function containsDuplicateUsingSize(nums) {
+    return new Set(nums).size !== nums.length
+}
+
+console.log(containsDuplicateUsingSize(nums))
