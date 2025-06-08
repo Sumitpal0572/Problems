@@ -12,7 +12,7 @@ function containDuplicateusingSet(nums) {
 }
 
 
-nums = [1, 2, 3, 4, 5, 4]
+nums = [1, 2, 3, 4, 5, 6]
 // console.log(containDuplicateusingSet(nums));
 
 function containsDuplicateUsingObject(nums) {
@@ -26,11 +26,24 @@ function containsDuplicateUsingObject(nums) {
     return false
 }
 
-console.log(containsDuplicateUsingObject(nums))
+// console.log(containsDuplicateUsingObject(nums))
 
 
 function containsDuplicateUsingSize(nums) {
     return new Set(nums).size !== nums.length
 }
 
-console.log(containsDuplicateUsingSize(nums))
+// console.log(containsDuplicateUsingSize(nums))
+
+
+function containsDuplicateUsingSort(nums) {
+    nums.sort((a, b) => a - b); 
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] === nums[i - 1]) {
+            return true; 
+        }
+    }
+    return false; 
+}
+
+console.log(containsDuplicateUsingSort(nums))
