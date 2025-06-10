@@ -15,3 +15,9 @@ function findTwoSumIndices(nums, target){
 
     return [-1, -1];
 }
+
+
+let nums1 = [2,7,11,15,9];
+let target1 = 16;
+
+console.log(findTwoSumIndices(nums1,target1))
